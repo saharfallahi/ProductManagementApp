@@ -3,20 +3,25 @@
 this is a web page for add products and their categories with capability of search and sort and filter and delete on products
 
 
-## Demo
-
-https://product-management-psi-swart.vercel.app/
-
-
-## Logo
-
-<img width="40" height="40" alt="product-management" src="https://github.com/user-attachments/assets/8fc2a8bf-7ffd-4853-a10d-c62256ccccc6" />
-
 
 ## Screenshots
 
 <img width="1920" height="1200" alt="Screenshot (59)" src="https://github.com/user-attachments/assets/c4074385-f07a-4b79-8fe6-91709399e789" />
 <img width="1920" height="1200" alt="Screenshot (61)" src="https://github.com/user-attachments/assets/354be8d8-05e9-445c-ab5e-c502969eab36" />
+
+
+
+## Logo
+
+<img width="100" height="100" alt="product-management" src="https://github.com/user-attachments/assets/8fc2a8bf-7ffd-4853-a10d-c62256ccccc6" />
+
+
+
+## Demo
+
+https://product-management-psi-swart.vercel.app/
+
+
 
 ## Run Locally
 
