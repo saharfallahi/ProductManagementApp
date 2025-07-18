@@ -5,7 +5,7 @@ function TextField({ name, type, register, validationSchema }) {
     <input
     {...register(name, validationSchema)}
       id={name}
-      className="textField__input"
+      className="textField__input  w-full md:w-auto"
       type={type}
       autoComplete="off"
     />

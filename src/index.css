@@ -62,10 +62,10 @@
     @apply  py-3 px-4 rounded-xl text-secondary-400 border border-secondary-500 bg-inherit hover:border-primary-700 focus:border-primary-700  transition-all duration-300 ease-out  ;
   }
   .btn {
-    @apply px-3 py-3 font-bold rounded-xl transition-all duration-300;
+    @apply px-1 py-3 font-bold rounded-xl transition-all duration-300;
   }
   .btn--primary {
-    @apply px-4 py-3 bg-secondary-500 text-white hover:bg-primary-800  ;
+    @apply  py-3 bg-secondary-500 text-white hover:bg-primary-800  ;
   }
   .btn--secondary {
     @apply border border-secondary-500 text-secondary-100;
@@ -144,7 +144,7 @@ table td {
 
 @media screen and (max-width: 1024px) {  
   table td {
-    font-size: 0.75rem;
-    padding: 0.5rem 0.5rem 0.5rem 0;
+    /* font-size: 0.75rem; */
+    /* padding: 0.5rem 0.5rem 0.5rem 0; */
   }
 }

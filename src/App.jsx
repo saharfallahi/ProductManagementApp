@@ -4,6 +4,8 @@ import AddNewProduct from "./components/AddNewProduct";
 import ProductList from "./components/ProductList";
 import Filters from "./components/Filters";
 import useLocalStorage from "./hooks/useLocalStorage";
+import { Toaster } from "react-hot-toast";
+import Navbar from "./components/Navbar";
 
 function App() {
   // const [currentProduct, setCurrentProduct] = useState({});
@@ -26,11 +28,9 @@ function App() {
     {
       value: "ALL",
       label: "ALL",
-
     },
     ...mapCategories,
   ];
-
 
   const handleChangeSearch = (e) => {
     setSearch(e.target.value);
@@ -38,7 +38,7 @@ function App() {
 
   const handleChangeSort = (e) => {
     console.log(e.target.value);
-    
+
     setSort(e.target.value);
   };
   const handleChangeCategory = (e) => {
@@ -70,32 +70,45 @@ function App() {
   };
 
   return (
-    <div className="container mt-10 flex flex-col gap-y-8 lg:flex-row lg:gap-x-8">
-      <div className="flex flex-col gap-y-8 lg:w-1/2">
-        <AddNewCategory setCategories={setCategories} />
-        <AddNewProduct categories={categories} setProducts={setProducts} mapCategories={mapCategories}/>
-      </div>
-      <div className="flex flex-col gap-y-8 lg:w-1/2">
-        <div>
-          <h2 className="text-secondary-400">Filters</h2>
-          <hr className="border-secondary-500" />
-          <Filters
-            transformedCategories={transformedCategories}
-            search={search}
-            onChangeSearch={handleChangeSearch}
-            sort={sort}
-            onChangeSort={handleChangeSort}
-            category={category}
-            onChangeCategory={handleChangeCategory}
+    <div className="bg-slate-800 min-h-screen">
+      <Navbar products={products} />
+
+      <div className="container mt-10 flex flex-col gap-y-8 lg:flex-row lg:gap-x-8">
+        <Toaster />
+
+        <div className="flex flex-col gap-y-8 lg:w-1/2">
+          <AddNewCategory
+            categories={categories}
+            setCategories={setCategories}
+          />
+          <AddNewProduct
+            categories={categories}
+            setProducts={setProducts}
+            mapCategories={mapCategories}
           />
         </div>
-        <div>
-          <h2 className="text-secondary-300 text-xl">ProductList</h2>
-          <hr className="border-secondary-500" />
-          <ProductList
-            filteredProducts={filteredProducts}
-            onDeleteProduct={handleDeleteProduct}
-          />
+        <div className="flex flex-col gap-y-8 lg:w-1/2">
+          <div>
+            <h2 className="text-secondary-400">Filters</h2>
+            <hr className="border-secondary-500" />
+            <Filters
+              transformedCategories={transformedCategories}
+              search={search}
+              onChangeSearch={handleChangeSearch}
+              sort={sort}
+              onChangeSort={handleChangeSort}
+              category={category}
+              onChangeCategory={handleChangeCategory}
+            />
+          </div>
+          <div>
+            <h2 className="text-secondary-300 text-xl">ProductList</h2>
+            <hr className="border-secondary-500" />
+            <ProductList
+              filteredProducts={filteredProducts}
+              onDeleteProduct={handleDeleteProduct}
+            />
+          </div>
         </div>
       </div>
     </div>

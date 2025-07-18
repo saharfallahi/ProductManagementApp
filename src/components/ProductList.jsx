@@ -4,7 +4,8 @@ import toLocalDateShort from "../utils/toLocalDateShort";
 
 function ProductList({ filteredProducts,onDeleteProduct }) {
   return (
-    <table className="">
+    <div className="overflow-x-auto">
+    <table >
       <tbody>
         {filteredProducts.map((product) => (
           <tr className="" key={product.id}>
@@ -17,6 +18,7 @@ function ProductList({ filteredProducts,onDeleteProduct }) {
         ))}
       </tbody>
     </table>
+    </div>
   );
 }
 
