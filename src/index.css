@@ -144,7 +144,7 @@ table td {
 
 @media screen and (max-width: 1024px) {  
   table td {
-    /* font-size: 0.75rem; */
+    font-size: 0.85rem;
     /* padding: 0.5rem 0.5rem 0.5rem 0; */
   }
 }

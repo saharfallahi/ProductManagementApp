@@ -102,7 +102,7 @@ function App() {
             />
           </div>
           <div>
-            <h2 className="text-secondary-300 text-xl">ProductList</h2>
+            <h2 className="text-secondary-400">ProductList</h2>
             <hr className="border-secondary-500" />
             <ProductList
               filteredProducts={filteredProducts}
