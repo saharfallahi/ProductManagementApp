@@ -89,7 +89,7 @@ function App() {
         </div>
         <div className="flex flex-col gap-y-8 lg:w-1/2">
           <div>
-            <h2 className="text-secondary-400">Filters</h2>
+            <h2 className="text-secondary-400 font-bold">Filters</h2>
             <hr className="border-secondary-500" />
             <Filters
               transformedCategories={transformedCategories}
@@ -102,7 +102,7 @@ function App() {
             />
           </div>
           <div>
-            <h2 className="text-secondary-400">ProductList</h2>
+            <h2 className="text-secondary-400 font-bold">ProductList</h2>
             <hr className="border-secondary-500" />
             <ProductList
               filteredProducts={filteredProducts}
